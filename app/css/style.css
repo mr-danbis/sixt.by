@@ -382,17 +382,24 @@ body {
   max-width: 240px;
   border: 1px solid #cccccc;
   border-radius: 5px;
-  margin-top: 20px;
   padding: 20px;
 }
 .carpark_filter-title {
-  font-weight: 700;
-  font-size: 20px;
+  font-size: calc(
+    16px + 4 *
+      ((100vw - 320px) / 1600)
+  );
+  text-transform: uppercase;
   line-height: 17px;
   color: #333333;
+  font-family: "VerdanaBold";
 }
 .carpark_filter .sect_name {
-  font-weight: 700;
+  font-family: "VerdanaBold";
+  font-size: calc(
+    14px + 4 *
+      ((100vw - 320px) / 1600)
+  );
   font-size: 18px;
   line-height: 22px;
   color: #333333;
@@ -507,6 +514,6 @@ body {
   transition: 0.3s;
 }
 .carpark_filter-button:hover {
-  background: #ffffff;
+  background: transparent;
   color: #20b842;
 }
