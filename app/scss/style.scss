@@ -1,12 +1,13 @@
 //settings
-@import 'settings/vars';
-@import 'settings/fonts';
-@import 'settings/reset';
-@import 'settings/libs';
-@import 'settings/global';
+@import "settings/vars";
+@import "settings/fonts";
+@import "settings/reset";
+@import "settings/libs";
+@import "settings/global";
 
 //common blocks
-@import '../blocks/header/header';
-@import '../blocks/footer/footer';
+@import "../blocks/header/header";
+@import "../blocks/footer/footer";
 
 //main page blocks
+@import "../blocks/autopark/autopark";

@@ -212,3 +212,139 @@ body {
   width: 80%;
   margin: 0 auto;
 }
+
+.carpark_filter {
+  background: #f5f5f5;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  max-width: 240px;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  margin-top: 20px;
+  padding: 20px;
+}
+.carpark_filter-title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 17px;
+  color: #333333;
+}
+.carpark_filter .sect_name {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+  color: #333333;
+  padding-top: 20px;
+  padding-bottom: 15px;
+}
+.carpark_filter .checkbox {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  color: #666666;
+}
+.carpark_filter .checkbox:not(:last-child) {
+  padding-bottom: 10px;
+}
+.carpark_filter .checkbox .master {
+  display: none;
+}
+.carpark_filter .checkbox .fake {
+  position: relative;
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 16px;
+  height: 16px;
+  border: 1px solid #cccccc;
+  border-radius: 2px;
+  top: 2px;
+}
+.carpark_filter .checkbox .fake::before {
+  position: absolute;
+  display: block;
+  content: url("/images/icons/checkbox.svg");
+  opacity: 0;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  top: -1px;
+  left: -1px;
+}
+.carpark_filter .checkbox .master:checked + .fake::before {
+  opacity: 1;
+}
+.carpark_filter .checkbox .master:checked + .fake::before .fake {
+  display: none;
+}
+.carpark_filter .range {
+  padding-bottom: 30px;
+  max-width: 188px;
+}
+.carpark_filter .range-circle {
+  position: relative;
+  z-index: 7;
+  width: 188px;
+  background: #ffffff;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  height: 5px;
+}
+.carpark_filter .range-circle::-webkit-slider-thumb {
+  width: 16px;
+  height: 16px;
+  border-radius: 100%;
+  background: #ed5f00;
+  -webkit-appearance: none;
+          appearance: none;
+}
+.carpark_filter .range-line {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-right: 4px;
+  margin-left: 9px;
+  margin-top: -4px;
+  margin-bottom: 5px;
+  z-index: 0;
+}
+.carpark_filter .range-num {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-right: 2px;
+  margin-left: 6px;
+}
+.carpark_filter .range-text {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  color: #666666;
+}
+.carpark_filter-button {
+  border: 1px solid #20b842;
+  background: #20b842;
+  border-radius: 5px;
+  padding: 20px 55px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #ffffff;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+.carpark_filter-button:hover {
+  background: #ffffff;
+  color: #20b842;
+}
