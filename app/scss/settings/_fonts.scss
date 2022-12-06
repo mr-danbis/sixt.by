@@ -1,14 +1,14 @@
-//example
+@font-face {
+  font-family: 'ArialRegular';
+  src: url('/fonts/ArialRegular.woff') format('woff'), url('/fonts/ArialRegular.woff2') format('woff2');
+}
 
-// @font-face {
-//   font-family: 'HelveticaLight';
-//   src: url('/fonts/HelveticaLight.woff') format('woff');
-//   font-weight: 300;
-//   font-style: normal;
-// }
-// @font-face {
-//   font-family: 'HelveticaLight';
-//   src: url('/fonts/HelveticaLight.woff2') format('woff2');
-//   font-weight: 300;
-//   font-style: normal;
-// }
+@font-face {
+  font-family: 'VerdanaRegular';
+  src: url('/fonts/VerdanaRegular.woff') format('woff'), url('/fonts/VerdanaRegular.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'VerdanaBold';
+  src: url('/fonts/VerdanaBold.woff') format('woff'), url('/fonts/VerdanaBold.woff2') format('woff2');
+}

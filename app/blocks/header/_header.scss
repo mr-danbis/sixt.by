@@ -1,0 +1,130 @@
+.header {
+    height: 85px;
+    background-color: #FF5F00;
+    margin-bottom: 50px;
+
+    &__wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__list {
+        display: flex;
+    }
+
+    &__item {
+        &:not(:last-child) {
+            margin-right: 25px;
+        }
+    }
+
+    &__link {
+        @include adaptiv-font(18, 14);
+        color: #333333;
+    }
+
+    &__block {
+        display: flex;
+        align-items: center;
+        margin-right: 46px;
+    }
+
+    &__box {
+        display: flex;
+        align-items: center;
+    }
+
+    &__search {
+        margin-right: 25px;
+    }
+
+    &__lang {
+        &-btn {
+            color: rgba(51, 51, 51, 0.3);
+            @include adaptiv-font(16, 12);
+            transition: all .3s;
+
+            &--active {
+                border-bottom: 1px solid #333333;
+                color: #333333;
+
+                &:hover {
+                    opacity: .5;
+                }
+            }
+
+            &:not(:last-child) {
+                margin-right: 11px;
+            }
+
+            &:hover {
+                color: #333333;
+            }
+        }
+    }
+
+    &__contact {
+        display: flex;
+        align-items: center;
+
+        &-btn {
+            @include adaptiv-font(16, 12);
+            background-color: #20B842;
+            border-radius: 5px;
+            color: #FFFFFF;
+            padding: 12.5px 20px 12.5px 60px;
+            position: relative;
+
+            &::before {
+                position: absolute;
+                content: url(/images/icons/phone.svg);
+                left: 20px;
+            }
+        }
+    }
+
+    &__phones {
+        margin-right: 15px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__tel {
+        @include adaptiv-font(16, 12);
+        font-family: 'VerdanaBold';
+        color: #333333;
+    }
+
+    &__burger{
+        display: none;
+    }
+}
+
+@media (max-width: 1700px) {
+    .header {
+        .container {
+            width: 95%;
+        }
+    }
+}
+
+@media (max-width: 1450px) {
+    .header{
+        &__nav{
+            display: none;
+        }
+
+        &__contact{
+            display: none;
+        }
+
+        &__lang{
+            display: none;
+        }
+
+        &__burger{
+            display: block;
+        }
+    }
+}
