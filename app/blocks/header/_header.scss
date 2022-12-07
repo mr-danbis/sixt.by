@@ -69,13 +69,8 @@
         align-items: center;
 
         &-btn {
-            @include adaptiv-font(16, 12);
-            background-color: #20B842;
-            border-radius: 5px;
-            color: #FFFFFF;
             padding: 12.5px 20px 12.5px 60px;
             position: relative;
-
             &::before {
                 position: absolute;
                 content: url(/images/icons/phone.svg);

@@ -42,8 +42,89 @@ body {
 
 .section-title {
     text-transform: uppercase;
-    @include adaptiv-font(35,25);
+    @include adaptiv-font(35, 25);
     text-align: center;
     color: #ED5F00;
     font-family: 'VerdanaBold';
+}
+
+.slider {
+    .owl-stage {
+        display: flex;
+    }
+
+    .owl-stage-outer {
+        overflow-x: hidden
+    }
+
+    .owl-nav {
+        margin-top: 40px;
+        display: flex;
+        justify-content: flex-end;
+        button {
+            border: 1px solid #ED5F00;
+            border-radius: 3px;
+            width: 35px;
+            height: 35px;
+            transition: all .3s;
+
+            &:first-child {
+                margin-right: 10px;
+            }
+
+            &:hover {
+                background-color: #ED5F00;
+            }
+        }
+    }
+
+    .owl-dots{
+        justify-content: center;
+        align-items: center;
+        button{
+            width: 8px;
+            height: 8px;
+            border: 1px solid #333333;
+            border-radius: 50%;
+            margin-top: 45px;
+            &:not(:last-child){
+                margin-right: 10px;
+            }
+        }
+
+        .active{
+            width: 12px;
+            height: 12px;
+            background-color: #ED5F00;
+            border: 1px solid transparent;
+        }
+    }
+}
+
+.btn {
+    @include adaptiv-font(16, 12);
+    background-color: #20B842;
+    border: 1px solid transparent;
+    color: #FFFFFF;
+    border-radius: 5px;
+    padding: 12.5px 20px 12.5px 20px;
+    transition: all .3s;
+
+    &:hover {
+        background-color: transparent;
+        color: #20B842;
+        border: 1px solid #20B842;
+    }
+}
+
+
+@media (max-width: 750px) {
+    .slider {
+        .owl-nav {
+            display: none;
+        }
+        .owl-dots {
+            display: flex;
+        }
+    }
 }
