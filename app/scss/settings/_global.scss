@@ -40,14 +40,10 @@ body {
     margin: 0 auto;
 }
 
-.promo {
-    @include adaptiv-marginBottom(130, 50);
-}
-
 .section-title {
-    font-weight: 700;
+    text-transform: uppercase;
     @include adaptiv-font(35,25);
     text-align: center;
     color: #ED5F00;
-    @include adaptiv-marginBottom(50,20);
+    font-family: 'VerdanaBold';
 }
