@@ -1,0 +1,37 @@
+.fleet{
+    @include adaptiv-marginBottom(130,50);
+
+    &__title{
+        margin-bottom: 10px;
+    }
+
+    &__text{
+        width: 631px;
+        margin: auto;
+        text-align: center;
+        @include adaptiv-font(18,15);
+        line-height: 22px;
+        @include adaptiv-marginBottom(77,57);
+    }
+    
+    &__slide{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        &-img{
+            margin-bottom: 44px;
+        }
+        &-title{
+            margin-bottom: 20px;
+            font-family: 'VerdanaBold';
+        }
+    }
+}
+
+@media (max-width: 800px) {
+    .fleet{
+        &__text{
+            width: 100%;
+        }
+    }
+}

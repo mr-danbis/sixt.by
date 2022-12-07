@@ -1,0 +1,11 @@
+.promo {
+    @include adaptiv-marginBottom(130, 50);
+}
+
+@media (max-width: 800px) {
+    .promo{
+        .container{
+            width: 100%;
+        }
+    }
+}
