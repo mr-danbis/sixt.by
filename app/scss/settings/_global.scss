@@ -39,3 +39,15 @@ body {
     width: 85%;
     margin: 0 auto;
 }
+
+.promo {
+    @include adaptiv-marginBottom(130, 50);
+}
+
+.section-title {
+    font-weight: 700;
+    @include adaptiv-font(35,25);
+    text-align: center;
+    color: #ED5F00;
+    @include adaptiv-marginBottom(50,20);
+}

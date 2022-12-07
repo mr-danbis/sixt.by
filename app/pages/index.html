@@ -1,27 +1,35 @@
 <!DOCTYPE html>
 <html lang="ru">
-  @@include('../blocks/head/head.html')
+@@include('../blocks/head/head.html')
 
-  <body>
+<body>
     <div class="wrapper">
-      @@include('../blocks/header/header.html')
-      <!-- /.header -->
+        @@include('../blocks/header/header.html')
+        <!-- /.header -->
 
-      <main class="main">
-        <div class="container">
+        <main class="main">
+            <div class="container">
+                <img class="promo" src="/images/promo.png" alt="Баннер на главной">
+                <!-- /.promo -->
 
-        </div>
-        <!-- /.container -->
-      </main>
-      <!-- /.main -->
+                @@include('../blocks/mainPage/services/services.html')
+                <!-- /.services -->
+                @@include('../blocks/mainPage/fleet/fleet.html')
+                <!-- /.fleet -->
 
-      @@include('../blocks/footer/footer.html')
-      <!-- /.footer -->
+            </div>
+            <!-- /.container -->
+        </main>
+        <!-- /.main -->
+
+        @@include('../blocks/footer/footer.html')
+        <!-- /.footer -->
     </div>
     <!-- /.wrapper -->
 
     @@include('../blocks/foot/foot.html')
     <!-- /.foot -->
-  </body>
-  <script src="/js/main.js"></script>
+</body>
+<script src="/js/main.js"></script>
+
 </html>

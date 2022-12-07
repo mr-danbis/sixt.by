@@ -236,6 +236,21 @@ body {
   margin: 0 auto;
 }
 
+.promo {
+  margin-bottom: calc(50px + 80 * ((100vw - 320px) / 1600));
+}
+
+.section-title {
+  font-weight: 700;
+  font-size: calc(
+    25px + 10 *
+      ((100vw - 320px) / 1600)
+  );
+  text-align: center;
+  color: #ED5F00;
+  margin-bottom: calc(20px + 30 * ((100vw - 320px) / 1600));
+}
+
 .header {
   height: 85px;
   background-color: #FF5F00;
