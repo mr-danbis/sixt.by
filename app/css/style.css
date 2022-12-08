@@ -883,14 +883,7 @@ body {
   margin-bottom: calc(60px + 70 * ((100vw - 320px) / 1600));
 }
 .advantages__title {
-  font-weight: 700;
-  font-size: calc(
-    25px + 10 *
-      ((100vw - 320px) / 1600)
-  );
   margin-bottom: calc(30px + 20 * ((100vw - 320px) / 1600));
-  line-height: 43px;
-  color: #ed5f00;
 }
 .advantages__container {
   display: -webkit-box;
@@ -951,22 +944,41 @@ body {
   margin-bottom: calc(100px + 100 * ((100vw - 320px) / 1600));
 }
 .partner__title {
-  text-align: center;
-  font-weight: 700;
-  font-size: 35px;
-  line-height: 43px;
-  color: #ed5f00;
   margin-bottom: calc(30px + 20 * ((100vw - 320px) / 1600));
+}
+.partner__slider {
+  max-width: 1380px;
+  display: block;
+  margin: auto;
+}
+.partner__slide {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .partner .slider .owl-nav {
   display: none;
 }
 
 @media (max-width: 1640px) {
+  .partner__slider {
+    margin: 0;
+  }
   .partner .slider .owl-nav {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+  }
+}
+@media (max-width: 750px) {
+  .partner .slider .owl-nav {
+    display: none;
   }
 }
 .carpark_filter {

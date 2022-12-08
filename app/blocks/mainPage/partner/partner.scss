@@ -4,12 +4,19 @@
   @include adaptiv-marginBottom(200, 100);
 
   &__title {
-    text-align: center;
-    font-weight: 700;
-    font-size: 35px;
-    line-height: 43px;
-    color: #ed5f00;
     @include adaptiv-marginBottom(50, 30);
+  }
+
+  &__slider {
+    max-width: 1380px;
+    display: block;
+    margin: auto;
+  }
+
+  &__slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .slider {
@@ -21,9 +28,23 @@
 
 @media (max-width: 1640px) {
   .partner {
+    &__slider {
+      margin: 0;
+    }
+
     .slider {
       .owl-nav {
         display: flex;
+      }
+    }
+  }
+}
+
+@media (max-width: 750px) {
+  .partner {
+    .slider {
+      .owl-nav {
+        display: none;
       }
     }
   }

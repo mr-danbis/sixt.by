@@ -4,11 +4,7 @@
   align-items: center;
   @include adaptiv-marginBottom(130, 60);
   &__title {
-    font-weight: 700;
-    @include adaptiv-font(35, 25);
     @include adaptiv-marginBottom(50, 30);
-    line-height: 43px;
-    color: #ed5f00;
   }
   &__container {
     display: flex;
