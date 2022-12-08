@@ -188,7 +188,7 @@ button {
 html,
 body {
   height: 100%;
-  color: #051B1F;
+  color: #051b1f;
   font-family: "VerdanaRegular";
   font-style: normal;
   font-weight: 400;
@@ -243,7 +243,7 @@ body {
       ((100vw - 320px) / 1600)
   );
   text-align: center;
-  color: #ED5F00;
+  color: #ed5f00;
   font-family: "VerdanaBold";
 }
 
@@ -265,7 +265,7 @@ body {
           justify-content: flex-end;
 }
 .slider .owl-nav button {
-  border: 1px solid #ED5F00;
+  border: 1px solid #ed5f00;
   border-radius: 3px;
   width: 35px;
   height: 35px;
@@ -277,9 +277,10 @@ body {
   margin-right: 10px;
 }
 .slider .owl-nav button:hover {
-  background-color: #ED5F00;
+  background-color: #ed5f00;
 }
 .slider .owl-dots {
+  display: none;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -300,7 +301,7 @@ body {
 .slider .owl-dots .active {
   width: 12px;
   height: 12px;
-  background-color: #ED5F00;
+  background-color: #ed5f00;
   border: 1px solid transparent;
 }
 
@@ -309,9 +310,9 @@ body {
     12px + 4 *
       ((100vw - 320px) / 1600)
   );
-  background-color: #20B842;
+  background-color: #20b842;
   border: 1px solid transparent;
-  color: #FFFFFF;
+  color: #ffffff;
   border-radius: 5px;
   padding: 12.5px 20px 12.5px 20px;
   -webkit-transition: all 0.3s;
@@ -320,8 +321,8 @@ body {
 }
 .btn:hover {
   background-color: transparent;
-  color: #20B842;
-  border: 1px solid #20B842;
+  color: #20b842;
+  border: 1px solid #20b842;
 }
 
 @media (max-width: 750px) {
@@ -535,6 +536,12 @@ body {
   font-size: 16px;
   line-height: 19px;
   color: #ffffff;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+.footer__rent--item:hover {
+  opacity: 70%;
 }
 .footer__rent--item:not(:last-child) {
   padding-bottom: 10px;
@@ -573,6 +580,12 @@ body {
   font-size: 16px;
   line-height: 19px;
   color: #ffffff;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+.footer__tel:hover {
+  opacity: 70%;
 }
 .footer__call {
   font-weight: 400;
@@ -587,12 +600,19 @@ body {
   background: #20b842;
   border-radius: 5px;
   position: relative;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
 }
 .footer__call::before {
   position: absolute;
   content: url(/images/icons/phone.svg);
   left: 23px;
   top: 12px;
+}
+.footer__call:hover {
+  color: #20b842;
+  background: #ed5f00;
 }
 .footer__card {
   position: relative;
@@ -630,7 +650,11 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: absolute;
+  width: 510px;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
@@ -708,6 +732,7 @@ body {
         -ms-transform: translate(0, 0);
             transform: translate(0, 0);
     margin-top: 20px;
+    width: 100%;
   }
 }
 .promo {
@@ -889,6 +914,9 @@ body {
 .advantages__item:not(:last-child) {
   margin-right: calc(15px + 15 * ((100vw - 320px) / 1600));
 }
+.advantages__img {
+  margin-bottom: 15px;
+}
 .advantages__text {
   max-width: 233px;
   font-weight: 400;
@@ -910,6 +938,35 @@ body {
   }
   .advantages__item:not(:last-child) {
     margin-bottom: 30px;
+  }
+}
+.partner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: calc(100px + 100 * ((100vw - 320px) / 1600));
+}
+.partner__title {
+  text-align: center;
+  font-weight: 700;
+  font-size: 35px;
+  line-height: 43px;
+  color: #ed5f00;
+  margin-bottom: calc(30px + 20 * ((100vw - 320px) / 1600));
+}
+.partner .slider .owl-nav {
+  display: none;
+}
+
+@media (max-width: 1640px) {
+  .partner .slider .owl-nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
 }
 .carpark_filter {

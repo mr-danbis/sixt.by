@@ -37,6 +37,10 @@
       font-size: 16px;
       line-height: 19px;
       color: #ffffff;
+      transition: 0.3s;
+      &:hover {
+        opacity: 70%;
+      }
       &:not(:last-child) {
         padding-bottom: 10px;
       }
@@ -66,6 +70,10 @@
     font-size: 16px;
     line-height: 19px;
     color: #ffffff;
+    transition: 0.3s;
+    &:hover {
+      opacity: 70%;
+    }
   }
   &__call {
     font-weight: 400;
@@ -80,11 +88,16 @@
     background: #20b842;
     border-radius: 5px;
     position: relative;
+    transition: 0.3s;
     &::before {
       position: absolute;
       content: url(/images/icons/phone.svg);
       left: 23px;
       top: 12px;
+    }
+    &:hover {
+      color: #20b842;
+      background: #ed5f00;
     }
   }
 
@@ -108,7 +121,9 @@
   }
   &__icons {
     display: flex;
+    align-items: center;
     position: absolute;
+    width: 510px;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -180,6 +195,7 @@
       top: 0;
       transform: translate(0, 0);
       margin-top: 20px;
+      width: 100%;
     }
   }
 }
