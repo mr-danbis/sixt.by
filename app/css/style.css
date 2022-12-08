@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: "ArialRegular";
   src: url("/fonts/ArialRegular.woff") format("woff"), url("/fonts/ArialRegular.woff2") format("woff2");
@@ -867,6 +868,108 @@ body {
 @media (max-width: 800px) {
   .fleet__text {
     width: 100%;
+  }
+}
+.rental {
+  margin-bottom: calc(50px + 80 * ((100vw - 320px) / 1600));
+}
+.rental__title {
+  margin-bottom: calc(20px + 30 * ((100vw - 320px) / 1600));
+}
+.rental__content {
+  width: 1020px;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.rental__content-title {
+  font-size: calc(
+    18px + 2 *
+      ((100vw - 320px) / 1600)
+  );
+  line-height: 22px;
+  font-family: "VerdanaBold";
+  margin-bottom: 10px;
+}
+.rental__content-subtitle {
+  font-size: calc(
+    15px + 1 *
+      ((100vw - 320px) / 1600)
+  );
+  line-height: 140%;
+  font-family: "VerdanaBold";
+  margin-bottom: 10px;
+}
+.rental__content-subtitle--contact {
+  margin-bottom: 0;
+}
+.rental__content-text {
+  margin-bottom: 5px;
+  font-size: calc(
+    15px + 1 *
+      ((100vw - 320px) / 1600)
+  );
+  line-height: 140%;
+}
+.rental__content-descr {
+  font-size: calc(
+    15px + 1 *
+      ((100vw - 320px) / 1600)
+  );
+  line-height: 140%;
+  color: rgba(51, 51, 51, 0.5);
+}
+.rental__content-item {
+  padding-left: 30px;
+  position: relative;
+}
+.rental__content-item:not(:last-child) {
+  margin-bottom: 5px;
+}
+.rental__content-item::before {
+  position: absolute;
+  left: 10px;
+  content: "•";
+}
+.rental__content-link {
+  font-family: "VerdanaBold";
+  font-size: calc(
+    15px + 1 *
+      ((100vw - 320px) / 1600)
+  );
+  color: #333333;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.rental__content-link:hover {
+  opacity: 0.5;
+}
+.rental__column {
+  width: 47%;
+}
+
+@media (max-width: 1200px) {
+  .rental__content {
+    width: 100%;
+  }
+}
+@media (max-width: 800px) {
+  .rental__content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .rental__column {
+    width: 100%;
+  }
+  .rental__column:not(:last-child) {
+    margin-bottom: 20px;
   }
 }
 .advantages {
