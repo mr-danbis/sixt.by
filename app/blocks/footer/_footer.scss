@@ -76,28 +76,21 @@
     }
   }
   &__call {
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 19px;
-    color: #ffffff;
-    width: 211px;
-    padding-top: 12px;
-    padding-bottom: 12px;
-    padding-right: 20px;
-    padding-left: 54px;
-    background: #20b842;
-    border-radius: 5px;
+    padding: 12.5px 20px 12.5px 60px;
     position: relative;
-    transition: 0.3s;
+    transition: all 0.3s;
     &::before {
       position: absolute;
       content: url(/images/icons/phone.svg);
-      left: 23px;
-      top: 12px;
+      left: 20px;
     }
     &:hover {
-      color: #20b842;
-      background: #ed5f00;
+      &::before {
+        position: absolute;
+        content: url(/images/icons/phone1.svg);
+        content: url(/images/icons/phone.svg) none;
+        left: 20px;
+      }
     }
   }
 

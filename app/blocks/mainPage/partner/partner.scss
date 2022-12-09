@@ -11,9 +11,9 @@
     max-width: 1380px;
     display: block;
     margin: auto;
-    .owl-item{
-        display: flex;
-    align-items: center;
+    .owl-item {
+      display: flex;
+      align-items: center;
     }
   }
 
@@ -37,18 +37,8 @@
     }
 
     .slider {
-      .owl-nav {
+      .owl-dots {
         display: flex;
-      }
-    }
-  }
-}
-
-@media (max-width: 750px) {
-  .partner {
-    .slider {
-      .owl-nav {
-        display: none;
       }
     }
   }
