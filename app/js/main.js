@@ -12,6 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const fleetSlider = new Slider();
   const partnerSlider = new Slider();
   const reviewsSlider = new Slider();
+  const carSlider = new Slider();
 
   fleetSlider.addSlider(".fleet__slider", {
     responsive: {
@@ -73,16 +74,41 @@ document.addEventListener("DOMContentLoaded", function () {
     },
   });
 
-  function showMoreReview() {
-    $(".reviews__slide-more").click(function (event) {
-      $(".reviews__slide-text--more").slideToggle(0);
-      $(".reviews__slide-text--dots").slideToggle(0);
-    });
+  carSlider.addSlider(".auto__slider", {
+    responsive: {
+      0: {
+        items: 1,
+        margin: 0,
+      },
 
-    // const moreReviewBtn = document.querySelectorAll(".reviews__slide-more");
-    // moreReviewBtn.forEach((btn) => {
-    //   btn.addEventListener("click", () => {});
-    // });
+      650: {
+        items: 4,
+        margin: 15,
+      },
+    },
+  });
+
+  function showMoreReview() {
+    const showMoreCommentBtn = document.querySelectorAll(
+      ".reviews__slide-more"
+    );
+
+    showMoreCommentBtn.forEach((btn) => {
+      btn.addEventListener("click", (e) => {
+        let clickedItem = e.target.parentNode.parentNode;
+        let clickedText = clickedItem.querySelector(".reviews__slide-text");
+
+        if (btn.innerText == "Показать меньше") {
+          btn.innerHTML = "Читать полностью";
+          clickedText.style.webkitLineClamp = "8";
+          clickedItem.style.zIndex = "0";
+        } else {
+          btn.innerHTML = "Показать меньше";
+          clickedText.style.webkitLineClamp = "unset";
+          clickedItem.style.zIndex = "1";
+        }
+      });
+    });
   }
   showMoreReview();
 
@@ -96,8 +122,50 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     closeMenuBtn.addEventListener("click", () => {
-      mobMenu.style.transform = "translateX(200%)";
+      mobMenu.style.transform = "translateX(100%)";
     });
   }
   openMobileSidebar();
+
+  function openForm() {
+    const formBtn = document.querySelectorAll(".header__contact-btn");
+    const formFooterBtn = document.querySelectorAll(".footer__call");
+    const formSidebarBtn = document.querySelectorAll(".sidebar__call");
+    const closeFormBtn = document.querySelectorAll(".modal__close");
+    const modalForm = document.querySelector(".modal");
+
+    formBtn.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        modalForm.style.display = "block";
+      });
+    });
+
+    formFooterBtn.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        modalForm.style.display = "block";
+      });
+    });
+    formSidebarBtn.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        modalForm.style.display = "block";
+      });
+    });
+
+    closeFormBtn.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        modalForm.style.display = "none";
+      });
+    });
+  }
+  openForm();
+
+  function costCar() {
+    $(".auto__cost-lang--btn").click(function (event) {
+      if ($(".auto__cost-lang").hasClass("one")) {
+        $(".auto__cost-lang--btn").not($(this)).removeClass("active");
+      }
+      $(this).toggleClass("active");
+    });
+  }
+  costCar();
 });

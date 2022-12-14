@@ -1,0 +1,51 @@
+<section class="modal">
+  <div class="modal__overlay"></div>
+  <div class="modal__form">
+    <img class="modal__close" src="/images/icons/close.svg" alt="Закрыть" />
+    <h2 class="modal__title">Заказать звонок</h2>
+
+    <form class="modal__fields" action="">
+      <div class="modal__field">
+        <label class="modal__field-label" for="name">Имя</label>
+        <input
+          class="modal__field-input"
+          type="text"
+          name="name"
+          placeholder="Иван"
+          required
+        />
+      </div>
+      <div class="modal__field">
+        <label class="modal__field-label" for="tel">Номер телефона</label>
+        <input
+          class="modal__field-input modal__field-input--tel"
+          type="tel"
+          name="tel"
+          placeholder="+375"
+          required
+        />
+      </div>
+      <div class="modal__field">
+        <label class="modal__field-label" for="time">Время звонка</label>
+        <input
+          class="modal__field-input"
+          type="tel"
+          name="time"
+          placeholder="9:00 - 15:00"
+          required
+        />
+      </div>
+      <div class="modal__field">
+        <label class="modal__field-label" for="text">Тема</label>
+        <input
+          class="modal__field-input"
+          type="text"
+          name="text"
+          placeholder="Что вас интересует?"
+          required
+        />
+      </div>
+      <button class="modal__btn btn">Отправить запрос</button>
+    </form>
+  </div>
+</section>

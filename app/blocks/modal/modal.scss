@@ -1,0 +1,81 @@
+.modal {
+  display: none;
+  &__overlay {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: #f1f1f4;
+    opacity: 0.4;
+    z-index: 13;
+  }
+
+  &__form {
+    background: #ffffff;
+    border-radius: 5px solid #ffffff;
+    display: flex;
+    flex-direction: column;
+    padding: 50px 40px;
+    z-index: 10000;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 416px;
+  }
+
+  &__close {
+    position: absolute;
+    right: 25px;
+    top: 25px;
+    cursor: pointer;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    color: #333333;
+    padding-bottom: 20px;
+    text-align: center;
+  }
+
+  &__fields {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__field {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 12px;
+    &-label {
+      padding-bottom: 4px;
+    }
+    &-input {
+      padding: 10px 10px 10px 15px;
+      background: #ffffff;
+      border: 1px solid #cccccc;
+      border-radius: 5px;
+      width: 100%;
+      &::placeholder {
+        color: #d8d8d8;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+      }
+      &--tel {
+        padding-left: 49px;
+        &::placeholder {
+          background: url(/images/icons/belarus.svg) no-repeat;
+          left: 0;
+        }
+      }
+    }
+  }
+
+  &__btn {
+    margin-top: 8px;
+  }
+}

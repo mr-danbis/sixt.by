@@ -9,6 +9,7 @@
 @import "../blocks/header/header";
 @import "../blocks/footer/footer";
 @import "../blocks/sidebar/sidebar";
+@import "../blocks/modal/modal";
 
 //main page blocks
 @import "../blocks/mainPage/promo/promo";
@@ -20,3 +21,6 @@
 @import "../blocks/mainPage/reviews/reviews";
 @import "../blocks/mainPage/partner/partner";
 @import "../blocks/fleetPage/filter/filter";
+
+//auto page blocks
+@import "../blocks/autoPage/auto";

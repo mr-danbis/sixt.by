@@ -1,75 +1,73 @@
 .about {
-    @include adaptiv-marginBottom(130, 50);
-    @include adaptiv-paddingBottom(130, 50);
-    position: relative;
+  @include adaptiv-marginBottom(130, 50);
+  @include adaptiv-paddingBottom(130, 50);
+  position: relative;
 
-    &__title {
-        @include adaptiv-marginBottom(50, 20);
+  &__title {
+    @include adaptiv-marginBottom(166, 20);
+  }
+
+  &__wrapper {
+    width: 1020px;
+    margin: auto;
+  }
+
+  &__content {
+    width: 50%;
+    &-title {
+      @include adaptiv-font(20, 18);
+      font-family: "VerdanaBold";
+      margin-bottom: 10px;
     }
-
-    &__wrapper{
-        width: 1020px;
-        margin: auto;
+    &-text {
+      @include adaptiv-font(16, 15);
+      margin-bottom: 15px;
+      line-height: 140%;
     }
-
-    &__content {
-        width: 50%;
-        &-title {
-            @include adaptiv-font(20, 18);
-            font-family: "VerdanaBold";
-            margin-bottom: 10px;
-        }
-        &-text{
-            @include adaptiv-font(16, 15);
-            margin-bottom: 15px;
-            line-height: 140%;
-        }
-        &-subtitle{
-            font-family: "VerdanaBold";
-            @include adaptiv-font(16, 15);
-            margin-bottom: 5px;
-        }
-        &-item{
-            padding-left: 30px;
-            position: relative;
-            &::before {
-                position: absolute;
-                left: 10px;
-                content: '•';
-            }
-
-            &:not(:last-child) {
-                margin-bottom: 5px;
-            }
-        }
+    &-subtitle {
+      font-family: "VerdanaBold";
+      @include adaptiv-font(16, 15);
+      margin-bottom: 5px;
     }
-
-    &__img{
+    &-item {
+      padding-left: 30px;
+      position: relative;
+      &::before {
         position: absolute;
-        top: 0;
-        right: 0;
-    }
-}
+        left: 10px;
+        content: "•";
+      }
 
+      &:not(:last-child) {
+        margin-bottom: 5px;
+      }
+    }
+  }
+
+  &__img {
+    position: absolute;
+    top: 85px;
+    right: 0;
+  }
+}
 
 @media (max-width: 1200px) {
-    .about{
-        &__wrapper{
-            width: 100%;
-        }
+  .about {
+    &__wrapper {
+      width: 100%;
     }
+  }
 }
 
-
 @media (max-width: 950px) {
-    .about{
-        padding: 0;
-        &__img{
-            width: 100%;
-            position: static;
-        }
-        &__content{
-            width: 100%;
-        }
+  .about {
+    padding: 0;
+    &__img {
+      width: 100%;
+      position: static;
     }
+    &__content {
+      width: 100%;
+    }
+  }
 }
