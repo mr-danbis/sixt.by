@@ -13,6 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const partnerSlider = new Slider();
   const reviewsSlider = new Slider();
   const carSlider = new Slider();
+  const carMobSlider = new Slider();
 
   fleetSlider.addSlider(".fleet__slider", {
     responsive: {
@@ -76,16 +77,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
   carSlider.addSlider(".auto__slider", {
     responsive: {
-      0: {
-        items: 1,
-        margin: 0,
-      },
-
       650: {
         items: 4,
         margin: 15,
       },
     },
+  });
+
+  carMobSlider.addSlider(".auto__slider--two", {
+    items: 1,
+    margin: 10,
   });
 
   function showMoreReview() {
@@ -168,4 +169,22 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
   costCar();
+
+  function showImg(event) {
+    event = event || window.event;
+    let iconImg = event.Target || event.srcElement;
+    if (iconImg.tagName == "IMG") {
+      const activeSlide = document
+        .querySelector(".auto__car")
+        .querySelector(".auto__slide-top");
+      activeSlide.src = iconImg.getAttribute("src");
+    }
+  }
+
+  if (wrapper.classList.contains("auto_page")) {
+    const imgWrapper = document.querySelector(".auto__slider");
+    imgWrapper.addEventListener("click", (e) => {
+      showImg(e);
+    });
+  }
 });

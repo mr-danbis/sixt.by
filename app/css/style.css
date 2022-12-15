@@ -988,29 +988,6 @@ body {
   font-size: 16px;
   line-height: 19px;
 }
-.modal__field-input--tel {
-  padding-left: 49px;
-}
-.modal__field-input--tel::-webkit-input-placeholder {
-  background: url(/images/icons/belarus.svg) no-repeat;
-  left: 0;
-}
-.modal__field-input--tel::-moz-placeholder {
-  background: url(/images/icons/belarus.svg) no-repeat;
-  left: 0;
-}
-.modal__field-input--tel:-ms-input-placeholder {
-  background: url(/images/icons/belarus.svg) no-repeat;
-  left: 0;
-}
-.modal__field-input--tel::-ms-input-placeholder {
-  background: url(/images/icons/belarus.svg) no-repeat;
-  left: 0;
-}
-.modal__field-input--tel::placeholder {
-  background: url(/images/icons/belarus.svg) no-repeat;
-  left: 0;
-}
 .modal__btn {
   margin-top: 8px;
 }
@@ -1760,16 +1737,19 @@ body {
 .auto__car {
   width: 50%;
 }
-.auto__slider {
-  margin-bottom: calc(32px + 101 * ((100vw - 320px) / 1600));
-}
-.auto__slide--first {
+.auto__car--two {
   display: none;
+  margin-bottom: 30px;
 }
-.auto .slider {
+.auto__car--two .slider .owl-dots {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.auto__car .slider {
   width: 100%;
 }
-.auto .slider .owl-stage {
+.auto__car .slider .owl-stage {
   width: 80% !important;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -1779,7 +1759,7 @@ body {
           align-items: center;
   margin: auto;
 }
-.auto .slider .owl-nav {
+.auto__car .slider .owl-nav {
   margin-top: -43px;
   position: relative;
   -webkit-box-pack: justify;
@@ -1792,17 +1772,20 @@ body {
   display: -ms-flexbox;
   display: flex;
 }
-.auto .slider .owl-nav button {
+.auto__car .slider .owl-nav button {
   position: absolute;
 }
-.auto .slider .owl-nav button:first-child {
+.auto__car .slider .owl-nav button:first-child {
   left: 0;
 }
-.auto .slider .owl-nav button:last-child {
+.auto__car .slider .owl-nav button:last-child {
   right: 0;
 }
-.auto .slider .owl-dots {
+.auto__car .slider .owl-dots {
   display: none;
+}
+.auto__slider {
+  margin-bottom: calc(32px + 101 * ((100vw - 320px) / 1600));
 }
 .auto__text {
   display: -webkit-box;
@@ -2073,24 +2056,10 @@ body {
             order: 2;
     margin-bottom: 15px;
   }
-  .auto__slide {
-    width: 100%;
-  }
-  .auto__slide-top {
+  .auto__car {
     display: none;
   }
-  .auto__slide--first {
+  .auto__car--two {
     display: block;
-  }
-  .auto .slider .owl-stage {
-    width: 100%;
-  }
-  .auto .slider .owl-nav {
-    display: none;
-  }
-  .auto .slider .owl-dots {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
   }
 }
