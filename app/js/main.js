@@ -1,4 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
+  const wrapper = document.querySelector(".wrapper");
+
   class Slider {
     constructor(owlElement, owlOptions) {
       this.owlElement = owlElement;
