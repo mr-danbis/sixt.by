@@ -127,6 +127,12 @@ document.addEventListener("DOMContentLoaded", function () {
     closeMenuBtn.addEventListener("click", () => {
       mobMenu.style.transform = "translateX(100%)";
     });
+
+    mobMenu.addEventListener("click", (event) => {
+      if (event.target) {
+        mobMenu.style.transform = "translateX(100%)";
+      }
+    });
   }
   openMobileSidebar();
 
@@ -177,8 +183,8 @@ document.addEventListener("DOMContentLoaded", function () {
     let iconImg = event.Target || event.srcElement;
     if (iconImg.tagName == "IMG") {
       const activeSlide = document
-        .querySelector(".auto__car")
-        .querySelector(".auto__slide-top");
+        .querySelector(".auto__slide-top")
+        .querySelector(".auto__slide-top--img");
       activeSlide.src = iconImg.getAttribute("src");
     }
   }
