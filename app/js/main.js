@@ -178,6 +178,13 @@ document.addEventListener("DOMContentLoaded", function () {
   }
   costCar();
 
+  function openFilter() {
+    $(".autopark__title-filter--img").click(function (event) {
+      $(this).toggleClass("active").next().slideToggle();
+    });
+  }
+  openFilter();
+
   function showImg(event) {
     event = event || window.event;
     let iconImg = event.Target || event.srcElement;

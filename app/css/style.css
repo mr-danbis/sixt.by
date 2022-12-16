@@ -340,7 +340,7 @@ body {
 .header {
   height: 85px;
   background-color: #ff5f00;
-  margin-bottom: 50px;
+  margin-bottom: calc(25px + 25 * ((100vw - 320px) / 1600));
 }
 .header__wrapper {
   display: -webkit-box;
@@ -479,6 +479,7 @@ body {
   }
 }
 .footer {
+  border-top: 6px solid #cf6a00;
   background: #000000;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1528,149 +1529,6 @@ body {
     display: flex;
   }
 }
-.carpark_filter {
-  background: #f5f5f5;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  max-width: 240px;
-  border: 1px solid #cccccc;
-  border-radius: 5px;
-  padding: 20px;
-}
-.carpark_filter-title {
-  font-size: calc(
-    16px + 4 *
-      ((100vw - 320px) / 1600)
-  );
-  text-transform: uppercase;
-  line-height: 17px;
-  color: #333333;
-  font-family: "VerdanaBold";
-}
-.carpark_filter .sect_name {
-  font-family: "VerdanaBold";
-  font-size: calc(
-    14px + 4 *
-      ((100vw - 320px) / 1600)
-  );
-  font-size: 18px;
-  line-height: 22px;
-  color: #333333;
-  padding-top: 20px;
-  padding-bottom: 15px;
-}
-.carpark_filter .checkbox {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 18px;
-  color: #666666;
-}
-.carpark_filter .checkbox:not(:last-child) {
-  padding-bottom: 10px;
-}
-.carpark_filter .checkbox .master {
-  display: none;
-}
-.carpark_filter .checkbox .fake {
-  position: relative;
-  display: inline-block;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  width: 16px;
-  height: 16px;
-  border: 1px solid #cccccc;
-  border-radius: 2px;
-  top: 2px;
-}
-.carpark_filter .checkbox .fake::before {
-  position: absolute;
-  display: block;
-  content: url("/images/icons/checkbox.svg");
-  opacity: 0;
-  -webkit-transition: 0.3s;
-  -o-transition: 0.3s;
-  transition: 0.3s;
-  top: -1px;
-  left: -1px;
-}
-.carpark_filter .checkbox .master:checked + .fake::before {
-  opacity: 1;
-}
-.carpark_filter .checkbox .master:checked + .fake::before .fake {
-  display: none;
-}
-.carpark_filter .range {
-  padding-bottom: 30px;
-  max-width: 188px;
-}
-.carpark_filter .range-circle {
-  position: relative;
-  z-index: 7;
-  width: 188px;
-  background: #ffffff;
-  border: 1px solid #cccccc;
-  border-radius: 5px;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  height: 5px;
-}
-.carpark_filter .range-circle::-webkit-slider-thumb {
-  width: 16px;
-  height: 16px;
-  border-radius: 100%;
-  background: #ed5f00;
-  -webkit-appearance: none;
-          appearance: none;
-}
-.carpark_filter .range-line {
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  margin-right: 4px;
-  margin-left: 9px;
-  margin-top: -4px;
-  margin-bottom: 5px;
-  z-index: 0;
-}
-.carpark_filter .range-num {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  margin-right: 2px;
-  margin-left: 6px;
-}
-.carpark_filter .range-text {
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 15px;
-  color: #666666;
-}
-.carpark_filter-button {
-  border: 1px solid #20b842;
-  background: #20b842;
-  border-radius: 5px;
-  padding: 20px 55px;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 19px;
-  color: #ffffff;
-  -webkit-transition: 0.3s;
-  -o-transition: 0.3s;
-  transition: 0.3s;
-}
-.carpark_filter-button:hover {
-  background: transparent;
-  color: #20b842;
-}
-
 .auto__container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2071,5 +1929,399 @@ body {
   }
   .auto__car--two {
     display: block;
+  }
+}
+.carpark_filter {
+  background: #f5f5f5;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  max-width: 240px;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  padding: 20px;
+}
+.carpark_filter-title {
+  font-size: calc(
+    16px + 4 *
+      ((100vw - 320px) / 1600)
+  );
+  text-transform: uppercase;
+  line-height: 17px;
+  color: #333333;
+  font-family: "VerdanaBold";
+}
+.carpark_filter .sect_name {
+  font-family: "VerdanaBold";
+  font-size: calc(
+    14px + 4 *
+      ((100vw - 320px) / 1600)
+  );
+  font-size: 18px;
+  line-height: 22px;
+  color: #333333;
+  padding-top: 20px;
+  padding-bottom: 15px;
+}
+.carpark_filter .checkbox {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  color: #666666;
+}
+.carpark_filter .checkbox:not(:last-child) {
+  padding-bottom: 10px;
+}
+.carpark_filter .checkbox .master {
+  display: none;
+}
+.carpark_filter .checkbox .fake {
+  position: relative;
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 16px;
+  height: 16px;
+  border: 1px solid #cccccc;
+  border-radius: 2px;
+  top: 2px;
+}
+.carpark_filter .checkbox .fake::before {
+  position: absolute;
+  display: block;
+  content: url("/images/icons/checkbox.svg");
+  opacity: 0;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  top: -1px;
+  left: -1px;
+}
+.carpark_filter .checkbox .master:checked + .fake::before {
+  opacity: 1;
+}
+.carpark_filter .checkbox .master:checked + .fake::before .fake {
+  display: none;
+}
+.carpark_filter .range {
+  padding-bottom: 30px;
+  max-width: 188px;
+}
+.carpark_filter .range-circle {
+  position: relative;
+  z-index: 7;
+  width: 188px;
+  background: #ffffff;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  height: 5px;
+}
+.carpark_filter .range-circle::-webkit-slider-thumb {
+  width: 16px;
+  height: 16px;
+  border-radius: 100%;
+  background: #ed5f00;
+  -webkit-appearance: none;
+          appearance: none;
+}
+.carpark_filter .range-line {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-right: 4px;
+  margin-left: 9px;
+  margin-top: -4px;
+  margin-bottom: 5px;
+  z-index: 0;
+}
+.carpark_filter .range-num {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-right: 2px;
+  margin-left: 6px;
+}
+.carpark_filter .range-text {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  color: #666666;
+}
+.carpark_filter-button {
+  border: 1px solid #20b842;
+  background: #20b842;
+  border-radius: 5px;
+  padding: 20px 55px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #ffffff;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+.carpark_filter-button:hover {
+  background: transparent;
+  color: #20b842;
+}
+
+.autopark__breadcrumbs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-bottom: calc(20px + 10 * ((100vw - 320px) / 1600));
+}
+.autopark__breadcrumbs-main {
+  font-weight: 400;
+  font-size: calc(
+    15px + 1 *
+      ((100vw - 320px) / 1600)
+  );
+  line-height: 16px;
+  color: #cccccc;
+  padding-right: 10px;
+  position: relative;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+.autopark__breadcrumbs-main::after {
+  position: absolute;
+  content: "|";
+}
+.autopark__breadcrumbs-main:hover {
+  color: #333333;
+}
+.autopark__breadcrumbs-now {
+  font-weight: 400;
+  font-size: calc(
+    15px + 1 *
+      ((100vw - 320px) / 1600)
+  );
+  line-height: 16px;
+  color: #333333;
+}
+.autopark__title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.autopark__title-name {
+  font-weight: 700;
+  line-height: 26px;
+  font-size: calc(
+    25px + 10 *
+      ((100vw - 320px) / 1600)
+  );
+  color: #333333;
+  margin-bottom: calc(20px + 30 * ((100vw - 320px) / 1600));
+}
+.autopark__title-filter {
+  display: none;
+  position: relative;
+}
+.autopark__title-filter--img {
+  cursor: pointer;
+}
+.autopark__title-filter .active {
+  content: url(/images/icons/filter-active.svg);
+}
+.autopark__title-filter--down {
+  display: none;
+  position: absolute;
+  top: 27px;
+  right: 0;
+}
+.autopark__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.autopark__filter {
+  margin-right: 40px;
+}
+.autopark__cars {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 65%;
+}
+.autopark__cars-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-bottom: 1px solid #cccccc;
+  padding-bottom: 20px;
+}
+.autopark__cars-item:not(:first-child) {
+  padding-top: 20px;
+}
+.autopark__cars__img {
+  margin-right: 30px;
+}
+.autopark__cars-text {
+  margin-right: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-top: calc(
+    10px + 9 *
+      ((100vw - 320px) / 1600)
+  );
+}
+.autopark__cars-text--name {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  color: #333333;
+  padding-bottom: 5px;
+  max-width: 245px;
+}
+.autopark__cars-text--description {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #666666;
+  padding-bottom: 2px;
+}
+.autopark__cars-text--info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 18px;
+}
+.autopark__cars-text--content {
+  margin-right: 4px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.autopark__cars-text--number {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #333333;
+}
+.autopark__cars-cost {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: calc(
+    10px + 9 *
+      ((100vw - 320px) / 1600)
+  );
+}
+.autopark__cars-cost--day {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  margin-bottom: 5px;
+}
+.autopark__cars-cost--digit {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  color: #333333;
+  padding-right: 7px;
+}
+.autopark__cars-cost--text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #333333;
+}
+.autopark__cars-cost--allday {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #333333;
+  margin-bottom: 20px;
+}
+.autopark__cars-cost--btn {
+  width: 100%;
+}
+.autopark__logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 29px;
+}
+
+@media (max-width: 1500px) {
+  .autopark__cars {
+    width: 100%;
+  }
+}
+@media (max-width: 1270px) {
+  .autopark__filter {
+    display: none;
+  }
+  .autopark__title-filter {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+@media (max-width: 970px) {
+  .autopark__cars {
+    margin-bottom: 100px;
+  }
+  .autopark__cars-item {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .autopark__logo {
+    display: none;
   }
 }

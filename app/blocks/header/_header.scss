@@ -1,7 +1,7 @@
 .header {
   height: 85px;
   background-color: #ff5f00;
-  margin-bottom: 50px;
+  @include adaptiv-marginBottom(50, 25);
   &__wrapper {
     display: flex;
     align-items: center;

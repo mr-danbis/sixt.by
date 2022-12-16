@@ -1,0 +1,201 @@
+.autopark {
+  &__breadcrumbs {
+    display: flex;
+    flex-wrap: wrap;
+    @include adaptiv-marginBottom(30, 20);
+    &-main {
+      font-weight: 400;
+      @include adaptiv-font(16, 15);
+      line-height: 16px;
+      color: #cccccc;
+      padding-right: 10px;
+      position: relative;
+      transition: 0.3s;
+      &::after {
+        position: absolute;
+        content: "|";
+      }
+      &:hover {
+        color: #333333;
+      }
+    }
+    &-now {
+      font-weight: 400;
+      @include adaptiv-font(16, 15);
+      line-height: 16px;
+      color: #333333;
+    }
+  }
+
+  &__title {
+    display: flex;
+    justify-content: space-between;
+    &-name {
+      font-weight: 700;
+      line-height: 26px;
+      @include adaptiv-font(35, 25);
+      color: #333333;
+      @include adaptiv-marginBottom(50, 20);
+    }
+    &-filter {
+      display: none;
+      position: relative;
+      &--img {
+        cursor: pointer;
+      }
+      .active {
+        content: url(/images/icons/filter-active.svg);
+      }
+
+      &--down {
+        display: none;
+        position: absolute;
+        top: 27px;
+        right: 0;
+      }
+    }
+  }
+
+  &__info {
+    display: flex;
+  }
+
+  &__filter {
+    margin-right: 40px;
+  }
+
+  &__cars {
+    display: flex;
+    flex-direction: column;
+    width: 65%;
+
+    &-item {
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px solid #cccccc;
+      padding-bottom: 20px;
+      &:not(:first-child) {
+        padding-top: 20px;
+      }
+    }
+
+    &__img {
+      margin-right: 30px;
+    }
+
+    &-text {
+      margin-right: 20px;
+      display: flex;
+      flex-direction: column;
+      @include adaptiv-paddingTop(19, 10);
+      &--name {
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 24px;
+        color: #333333;
+        padding-bottom: 5px;
+        max-width: 245px;
+      }
+      &--description {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+        color: #666666;
+        padding-bottom: 2px;
+      }
+      &--info {
+        display: flex;
+        margin-top: 18px;
+      }
+      &--content {
+        margin-right: 4px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      &--number {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+        color: #333333;
+      }
+    }
+
+    &-cost {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      @include adaptiv-paddingTop(19, 10);
+      &--day {
+        display: flex;
+        align-items: flex-end;
+        margin-bottom: 5px;
+      }
+      &--digit {
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 24px;
+        color: #333333;
+        padding-right: 7px;
+      }
+      &--text {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+        color: #333333;
+      }
+      &--allday {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+        color: #333333;
+        margin-bottom: 20px;
+      }
+      &--btn {
+        width: 100%;
+      }
+    }
+  }
+
+  &__logo {
+    display: flex;
+    justify-content: center;
+    margin-top: 29px;
+  }
+}
+
+@media (max-width: 1500px) {
+  .autopark {
+    &__cars {
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 1270px) {
+  .autopark {
+    &__filter {
+      display: none;
+    }
+    &__title {
+      &-filter {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+  }
+}
+
+@media (max-width: 970px) {
+  .autopark {
+    &__cars {
+      margin-bottom: 100px;
+      &-item {
+        flex-direction: column;
+      }
+    }
+    &__logo {
+      display: none;
+    }
+  }
+}

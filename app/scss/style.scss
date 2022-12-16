@@ -20,7 +20,10 @@
 @import "../blocks/mainPage/advantages/advantages";
 @import "../blocks/mainPage/reviews/reviews";
 @import "../blocks/mainPage/partner/partner";
-@import "../blocks/fleetPage/filter/filter";
 
 //auto page blocks
 @import "../blocks/autoPage/auto";
+
+//autopark page blocks
+@import "../blocks/fleetPage/filter/filter";
+@import "../blocks/fleetPage/autopark/autopark";
