@@ -8,12 +8,16 @@
   }
 
   &__slider {
-    max-width: 1380px;
+    width: 100%;
     display: block;
     margin: auto;
     .owl-item {
       display: flex;
       align-items: center;
+      justify-content: center;
+    }
+    .owl-stage {
+        justify-content: space-between;
     }
   }
 
